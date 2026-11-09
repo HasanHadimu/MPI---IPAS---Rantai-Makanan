@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #ecfdf5; }
+::-webkit-scrollbar-thumb { background: #10b981; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #059669; }
+
+@media print {
+  @page { margin: 1.5cm; }
+  body * { visibility: hidden; }
+  #lkpd-print, #lkpd-print * { visibility: visible; }
+  #lkpd-print {
+    position: absolute; left: 0; top: 0; width: 100%;
+    background: #fff; color: #000; padding: 0; box-shadow: none;
+    border-radius: 0 !important;
+  }
+  .no-print { display: none !important; }
+  input, textarea {
+    border: 1px solid #999 !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
